@@ -1,0 +1,32 @@
+{
+	"manifest_version": 3,
+	"name": "VK adBlock",
+	"version": "0.1",
+	"author": "Ilia Grigoriev",
+	"permissions": ["activeTab"],
+	"description": "Больше не будет рекламы в ленте и сообществах ВКонтакте",
+	"icons": {
+		"16": "img/16.png",
+		"32": "img/32.png",
+		"48": "img/48.png",
+		"64": "img/64.png",
+		"128": "img/128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://vk.com/*", "https://vk.com/*"],
+			"js": ["app.js"]
+		}
+	],
+	"action": {
+		"default_icon": {
+			"16": "img/16.png",
+			"32": "img/32.png",
+			"48": "img/48.png",
+			"64": "img/64.png",
+			"128": "img/128.png"
+		},
+		"default_title": "VK adBlock",
+		"default_popup": "popup.html"
+	}
+}
